@@ -1,0 +1,13 @@
+---
+pipeline: "workflows/maven/CanaryReleaseAndStage/Jenkinsfile"
+chatRoom: "manualoverride"
+issueProjectName: "manualoverride"
+buildName: "manualoverride"
+codeReview: true
+links:
+  Git: "https://lemurzjb@bitbucket.org/hughestech/tradeauthorizationservice.git"
+  Job: "http://172.30.98.146:80/job/manualoverride"
+  Staging: "http://172.30.152.37:80/kubernetes/pods?namespace=manualoverride-dev"
+environments:
+  Staging: "manualoverride-dev"
+useLocalFlow: true

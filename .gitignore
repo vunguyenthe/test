@@ -1,0 +1,11 @@
+target
+src/main/resources/rebel.xml
+.idea
+spring-mvc-angularjs.iml
+*/**/.DS_Store
+.project
+.settings
+.classpath
+TradeAuthorizationService.iml
+src/test/java/com/trade/atoc/util/ActiveMqBrokerFactoryTest.java
+src/main/java/com/trade/atoc/util/ActiveMqBrokerFactory.java

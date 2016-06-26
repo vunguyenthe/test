@@ -1,0 +1,11 @@
+Scenario: 
+Given the DeviceId is <device_id>
+When ATOC sends to TAS a message OrderSend with <content>
+Then TAS gets deviceId is <device_id>
+Then TAS request UPS to push notification to the device with <content> 
+When Mobile sends to TAS a message ApproveRequest with <approve_content>
+Then TAS sends to ATOC a message ApproveRequest with <approve_content>
+Then ATOC sends to MT4 a message OrderSend with <content>
+Examples: 
+|device_id|content|	approve_content |							
+|ab-cd-de-ef-fe-ea| {"name":"OrderSend","content":{"magic":1,"symbol":"USDCAD","stoploss":100,"messageId":"eff4d0a0-7d3a-4de7-a165-f2d2982f4296","takeprofit":120,"arrow_color":"BLUE","deviceId":"4b064ab1­4c51­4c50­8c68­07e027566117","volume":0.1,"price":100,"comment":"","expiration":"","cmd":"OP_BUY","slippage":3}} |
